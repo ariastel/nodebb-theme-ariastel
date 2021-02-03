@@ -1,5 +1,6 @@
 {
-	"id": "nodebb-theme-persona",
+	"id": "nodebb-theme-ariastel",
+	"url": "https://github.com/ariastel/nodebb-theme-ariastel",
 	"hooks": [
 		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
 		{ "hook": "filter:config.get", "method": "getThemeConfig" },
@@ -8,7 +9,7 @@
 		{ "hook": "filter:topic.build", "method": "addUserToTopic" }
 	],
 	"scripts": [
-		"public/persona.js",
+		"public/ariastel.js",
 		"public/modules/autohidingnavbar.js",
 		"public/modules/quickreply.js"
 	],
@@ -18,5 +19,6 @@
 	"acpScripts": [
 		"public/admin.js"
 	],
-	"languages": "languages"
+	"languages": "languages",
+	"settingsRoute": "/admin/plugins/ariastel"
 }

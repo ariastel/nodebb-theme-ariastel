@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-persona",
-    "name": "Persona",
-    "description": "The default theme for NodeBB. Uses a standard approach to forum design.",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona",
+    "id": "nodebb-theme-ariastel",
+    "name": "Ariastel",
+    "description": "The Ariastel theme for NodeBB.",
+    "url": "https://github.com/ariastel/nodebb-theme-ariastel",
     "screenshot": "screenshot.png"
 }

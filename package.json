@@ -1,15 +1,9 @@
 {
-  "name": "nodebb-theme-persona",
-  "version": "10.5.1",
-  "nbbpm": {
-    "compatibility": "^1.17.0"
-  },
-  "description": "Persona theme for NodeBB",
+  "name": "@ariastel/nodebb-theme-ariastel",
+  "version": "1.0.0",
+  "description": "Ariastel theme for NodeBB",
   "main": "library.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
-  },
+  "repository": "git://github.com/ariastel/nodebb-theme-ariastel.git",
   "keywords": [
     "nodebb",
     "theme",
@@ -32,14 +26,21 @@
       "name": "Barış Soner Uşaklı",
       "email": "baris@designcreateplay.com",
       "url": "https://github.com/barisusakli"
-    }
+    },
+    "Ariastel Team <ariastel@iamantosik.me> (https://github.com/ariastel)"
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
+    "url": "https://github.com/ariastel/nodebb-theme-ariastel/issues"
   },
   "dependencies": {
     "pulling": "^2.0.0",
     "striptags": "^3.1.1"
+  },
+  "nbbpm": {
+    "compatibility": "^1.16.x || ^1.17.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
