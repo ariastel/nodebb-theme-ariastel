@@ -59,7 +59,7 @@
 
 		<ul component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
 			{{{each posts}}}
-				<li component="post" class="{{{ if posts.deleted }}}deleted{{{ end }}} {{{ if posts.selfPost }}}self-post{{{ end }}} {{{ if posts.topicOwnerPost }}}topic-owner-post{{{ end }}}" <!-- IMPORT partials/data/topic.tpl -->>
+				<li component="post" class="{{{ if posts.deleted }}}deleted{{{ end }}} {{{ if posts.isNSFW }}}containsNSFW{{{ end }}} {{{ if posts.selfPost }}}self-post{{{ end }}} {{{ if posts.topicOwnerPost }}}topic-owner-post{{{ end }}}" <!-- IMPORT partials/data/topic.tpl -->>
 					<a component="post/anchor" data-index="{posts.index}" id="{posts.index}"></a>
 
 					<meta itemprop="datePublished" content="{posts.timestampISO}">
@@ -98,3 +98,5 @@
 	<!-- IMPORT partials/paginator.tpl -->
 </noscript>
 <!-- ENDIF !config.usePagination -->
+
+<svg width="0" height="0" style="position:absolute"><filter id="nsfwBlur"><feGaussianBlur in="SourceGraphic" stdDeviation="20"></feGaussianBlur></filter></svg>

@@ -177,14 +177,14 @@
 			<!-- ENDIF search_query -->
 			<!-- ENDIF matchCount -->
 
-			{{{each posts}}}
-			<div class="topic-row panel panel-default clearfix">
-				<div class="panel-body">
+			{{{ each posts }}}
+			<div component="post" class="topic-row panel panel-default clearfix{{{ if showAsPosts }}}{{{ if posts.isNSFW }}} containsNSFW{{{ end }}}{{{ end }}}" data-pid="{posts.pid}" data-uid="{posts.uid}">
+				<div class="panel-body"{{{ if posts.isNSFW }}} style="position: relative"{{{ end }}}>
 					<a href="{config.relative_path}/user/{posts.user.userslug}">{buildAvatar(posts.user, "sm", true)}</a>
 					<span class="search-result-text search-result-title"><a href="{config.relative_path}/post/{posts.pid}">{posts.topic.title}</a></span>
 					<br/>
 					<!-- IF showAsPosts -->
-					<div class="search-result-text">
+					<div class="search-result-text content">
 						{posts.content}
 						<p class="fade-out"></p>
 					</div>
@@ -196,7 +196,14 @@
 					</small>
 				</div>
 			</div>
-			{{{end}}}
+			
+				{{{ if showAsPosts }}}
+					{{{ if posts.isNSFW }}}
+						<svg width="0" height="0" style="position:absolute"><filter id="nsfwBlur"><feGaussianBlur in="SourceGraphic" stdDeviation="20"></feGaussianBlur></filter></svg>
+					{{{ end }}}
+				{{{ end }}}
+
+			{{{ end }}}
 
 			<!-- IF users.length -->
 			<ul id="users-container" class="users-container">
