@@ -99,4 +99,4 @@
 </noscript>
 <!-- ENDIF !config.usePagination -->
 
-<svg width="0" height="0" style="position:absolute"><filter id="nsfwBlur"><feGaussianBlur in="SourceGraphic" stdDeviation="20"></feGaussianBlur></filter></svg>
+<svg width="0" height="0" style="position:absolute"><filter id="nsfwBlur"><feGaussianBlur in="SourceGraphic" stdDeviation="50"></feGaussianBlur></filter></svg>
