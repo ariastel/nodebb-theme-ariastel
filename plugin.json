@@ -8,7 +8,9 @@
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
 		{ "hook": "filter:topic.build", "method": "addUserToTopic" }
 	],
-	"public": "static",
+	"staticDirs": {
+		"fonts": "static/fonts"
+	},
 	"scripts": [
 		"public/ariastel.js",
 		"public/modules/autohidingnavbar.js",
