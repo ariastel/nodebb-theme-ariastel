@@ -29,6 +29,11 @@ library.addAdminNavigation = function(header, callback) {
 library.defineWidgetAreas = function(areas, callback) {
 	areas = areas.concat([
 		{
+			name: "Footer Notes",
+			template: "global",
+			location: "footer_notes"
+		},
+		{
 			name: "Categories Sidebar",
 			template: "categories.tpl",
 			location: "sidebar"

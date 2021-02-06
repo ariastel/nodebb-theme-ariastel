@@ -8,7 +8,7 @@
 @dark-text-color: #1A1D21;
 @black-color: #000;
 
-@footer-height: 90px;
+@footer-height: 250px;
 @font-family-ariastel: "Montserrat", sans-serif;
 
 main {
@@ -33,7 +33,45 @@ main {
   padding: 20px;
   background-color: @header-footer-bg;
   
+  font-size: 12px;
+  font-weight: bold;
+
   @media (min-width: @screen-lg-min) {
     height: @footer-height;
+    padding-top: 60px;
+  }
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: @red-color;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+
+    &-item {
+      list-style: none;
+      margin: 4px 20px 4px 0;
+      text-transform: uppercase;
+    }
+  }
+
+  &__notes {
+    display: flex;
+    flex-direction: row;
+
+    & > * {
+      margin: 4px 20px 4px 0;
+    }
+    
+    @media (min-width: @screen-lg-min) {
+      flex-direction: column;
+      text-align: right;
+    }
   }
 }

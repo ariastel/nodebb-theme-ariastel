@@ -5,13 +5,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9 col-sm-12">
-					<div class="aa_footer__navbar navbar-default">
-						<ul id="main-nav" class="nav navbar-nav">
+					<div class="aa_footer__navbar">
+						<ul class="aa_footer__nav">
 							{{{each navigation}}}
 							<!-- IF function.displayMenuItem, @index -->
-							<li class="{navigation.class}">
-								<a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
-									<span class="{navigation.textClass}">{navigation.text}</span>
+							<li class="aa_footer__nav-item">
+								<a class="aa_footer__nav-link navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
+									<span>{navigation.text}</span>
 								</a>
 							</li>
 							<!-- ENDIF function.displayMenuItem -->
@@ -19,8 +19,10 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-lg-3 col-sm-12">
-
+				<div data-widget-area="footer" class="aa_footer__notes col-lg-3 col-sm-12">
+					{{{each widgets.footer_notes}}}
+						{{widgets.footer_notes.html}}
+					{{{end}}}
 				</div>
 			</div>
 		</div>
