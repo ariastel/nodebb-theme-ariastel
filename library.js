@@ -1,6 +1,7 @@
 'use strict';
 
 var meta = require.main.require('./src/meta');
+var navigation = require.main.require('./src/navigation');
 var user = require.main.require('./src/user');
 
 var library = {};
@@ -131,5 +132,10 @@ library.addUserToTopic = function(data, callback) {
 		callback(null, data);
 	}
 };
+
+library.renderFooter = async function(data) {
+	data.templateValues.navigation = await navigation.get(data.req.uid);
+	return data;
+}
 
 module.exports = library;

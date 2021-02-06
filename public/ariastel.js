@@ -22,12 +22,7 @@ $(document).ready(function () {
 	});
 
 	function fixHeaderPadding() {
-		var env = utils.findBootstrapEnvironment();
-		if (env === 'sm' || env === 'xs' || env === 'md') {
-			$('#panel').css('padding-top', $('#header-menu').outerHeight(true));
-		} else {
-			$('#panel').css('padding-top', $('#header-menu').outerHeight(true) - 70);
-		}
+		$('#panel').css('padding-top', $('#header-menu').outerHeight(true) - 50);
 	}
 
 	var lastBSEnv = '';

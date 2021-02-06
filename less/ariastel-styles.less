@@ -8,9 +8,32 @@
 @dark-text-color: #1A1D21;
 @black-color: #000;
 
-@font-family-ariastel:  "Montserrat", sans-serif;
+@footer-height: 90px;
+@font-family-ariastel: "Montserrat", sans-serif;
+
+main {
+  min-height: 100%;
+  height: auto;
+
+  @media (min-width: @screen-lg-min) {
+    margin: 0 auto @footer-height * -1;
+    padding: 0 0 @footer-height;
+  }
+}
+
+.navbar-toggle {
+  color: @white-color;
+
+  &:hover {
+    color: @red-color;
+  }
+}
 
 .aa_footer {
-  height: 250px;
+  padding: 20px;
   background-color: @header-footer-bg;
+  
+  @media (min-width: @screen-lg-min) {
+    height: @footer-height;
+  }
 }
