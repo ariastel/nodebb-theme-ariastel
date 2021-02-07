@@ -18,6 +18,17 @@
 							{{{end}}}
 						</ul>
 					</div>
+					{{{ if superCategories.length }}}
+						<ul class="aa_footer__super-categories">
+							{{{ each superCategories }}}
+							<li class="aa_footer__super-category">
+								<a href="/category/{superCategories.cid}">
+									<img src="{superCategories.fullLogo}" />
+								</a>
+							</li>
+							{{{ end }}}
+						</ul>
+					{{{ end }}}
 				</div>
 				<div data-widget-area="footer" class="aa_footer__notes col-lg-3 col-sm-12">
 					{{{each widgets.footer_notes}}}

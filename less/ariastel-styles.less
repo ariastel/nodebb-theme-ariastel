@@ -61,9 +61,23 @@ main {
     }
   }
 
+  &__super-categories {
+    padding: 0;
+  }
+
+  &__super-category {
+    width: 80px;
+    list-style: none;
+    margin-right: 24px;
+    & img {
+      max-width: 100%;
+    }
+  }
+
   &__notes {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 
     & > * {
       margin: 4px 20px 4px 0;

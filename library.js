@@ -1,10 +1,12 @@
 'use strict';
 
-var meta = require.main.require('./src/meta');
-var navigation = require.main.require('./src/navigation');
+const meta = require.main.require('./src/meta');
+const navigation = require.main.require('./src/navigation');
+const plugins = require.main.require('./src/plugins');
 var user = require.main.require('./src/user');
 
-var library = {};
+
+const library = {};
 
 library.init = function(params, callback) {
 	var app = params.router;
@@ -140,6 +142,7 @@ library.addUserToTopic = function(data, callback) {
 
 library.renderFooter = async function(data) {
 	data.templateValues.navigation = await navigation.get(data.req.uid);
+	data.templateValues.superCategories = await plugins.fireHook('filter:super-categories.get') || [];
 	return data;
 }
 
