@@ -32,7 +32,7 @@ main {
 .aa_footer {
   padding: 20px;
   background-color: @header-footer-bg;
-  
+
   font-size: 12px;
   font-weight: bold;
 
@@ -68,9 +68,14 @@ main {
   }
 
   &__super-category {
+
+    display: flex;
+    align-items: center;
+
     width: 80px;
     list-style: none;
     margin-right: 24px;
+
     & img {
       max-width: 100%;
     }
@@ -81,10 +86,10 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
 
-    & > * {
+    &>* {
       margin: 4px 20px 4px 0;
     }
-    
+
     @media (min-width: @screen-lg-min) {
       flex-direction: column;
       text-align: right;
@@ -113,7 +118,7 @@ main {
   @media (min-width: @screen-md-min) {
     height: 350px;
   }
-  
+
   @media (min-width: @screen-lg-min) {
     height: 450px;
   }
