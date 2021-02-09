@@ -22,7 +22,7 @@ $(document).ready(function () {
 	});
 
 	function fixHeaderPadding() {
-		$('#panel').css('padding-top', $('#header-menu').outerHeight(true) - 20);
+		$('#panel').css('padding-top', $('#header-menu').outerHeight(true));
 	}
 
 	var lastBSEnv = '';
