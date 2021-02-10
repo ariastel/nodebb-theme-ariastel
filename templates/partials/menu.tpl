@@ -153,7 +153,7 @@
 					</li>
 					<!-- ENDIF allowRegistration -->
 					<li>
-						<a href="{relative_path}/login">
+						<a href="{relative_path}/login" class="aa_login-button">
 							<i class="fa fa-sign-in fa-fw hidden-sm hidden-md hidden-lg"></i>
 							<span>[[global:login]]</span>
 						</a>
