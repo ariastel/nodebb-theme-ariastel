@@ -36,6 +36,11 @@ library.defineWidgetAreas = function(areas, callback) {
 			location: "footer_notes"
 		},
 		{
+			name: "Footer Navbar",
+			template: "global",
+			location: "footer_navbar"
+		},
+		{
 			name: "Categories Sidebar",
 			template: "categories.tpl",
 			location: "sidebar"

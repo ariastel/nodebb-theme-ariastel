@@ -5,16 +5,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9 col-sm-12">
-					<div class="aa_footer__navbar">
+					<div data-widget-area="footer-navbar" class="aa_footer__navbar">
 						<ul class="aa_footer__nav">
-							{{{each navigation}}}
-							<!-- IF function.displayMenuItem, @index -->
-							<li class="aa_footer__nav-item">
-								<a class="aa_footer__nav-link navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
-									<span>{navigation.text}</span>
-								</a>
-							</li>
-							<!-- ENDIF function.displayMenuItem -->
+							{{{each widgets.footer_navbar}}}
+								<li class="aa_footer__nav-item">
+									{{widgets.footer_navbar.html}}
+								</li>
 							{{{end}}}
 						</ul>
 					</div>
