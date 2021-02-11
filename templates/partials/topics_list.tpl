@@ -5,7 +5,7 @@
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 		<meta itemprop="name" content="{function.stripTags, title}">
 
-		<div class="col-md-6 col-sm-9 col-xs-10 content">
+		<div class="col-md-8 col-sm-9 col-xs-10 content">
 			<div class="avatar pull-left">
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
@@ -57,7 +57,13 @@
 				</span>
 				<!-- ENDIF topics.tags.length -->
 
-				<small class="hidden-xs"><span class="timeago" title="{topics.timestampISO}"></span> &bull; <a class="aa_topic__author" href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a></small>
+				<small class="hidden-xs">
+					<a class="aa_topic__author" href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a> &bull; 
+					<span class="timeago" title="{topics.timestampISO}"></span> &bull;
+					<span class="aa_topic__counter human-readable-number stats-votes text-muted">{topics.votes} <i class="fa fa-fw fa-heart" title="[[global:votes]]"></i></span>
+					<span class="aa_topic__counter human-readable-number stats-postcount text-muted">{topics.postcount} <i class="fa fa-fw fa-pencil" title="[[global:posts]]"></i></span>
+					<span class="aa_topic__counter human-readable-number stats-viewcount text-muted">{topics.viewcount} <i class="fa fa-fw fa-eye" title="[[global:views]]"></i></span>
+				</small>
 				<small class="visible-xs-inline">
 					<!-- IF topics.teaser.timestamp -->
 					<span class="timeago" title="{topics.teaser.timestampISO}"></span>
@@ -72,24 +78,7 @@
 			<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
 		</div>
 
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-votes">
-			<!-- IF !reputation:disabled -->
-			<span class="human-readable-number" title="{topics.votes}">{topics.votes}</span><br />
-			<small>[[global:votes]]</small>
-			<!-- END -->
-		</div>
-
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-postcount">
-			<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
-			<small>[[global:posts]]</small>
-		</div>
-
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-viewcount">
-			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
-			<small>[[global:views]]</small>
-		</div>
-
-		<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
+		<div class="col-md-4 col-sm-3 teaser hidden-xs" component="topic/teaser">
 			<div class="card" style="border-color: {topics.category.bgColor}">
 				<!-- IF topics.unreplied -->
 				<p>
