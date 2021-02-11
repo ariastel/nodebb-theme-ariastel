@@ -1,4 +1,4 @@
-<div class="clearfix">
+<div class="clearfix{{{ if post.isNSFW }}} containsNSFW{{{ end }}}" component="post" data-pid="{post.pid}">
 	<div class="icon pull-left">
 		<a href="<!-- IF post.user.userslug -->{config.relative_path}/user/{post.user.userslug}<!-- ELSE -->#<!-- ENDIF post.user.userslug -->">
 			{buildAvatar(post.user, "sm", true, "", "user/picture")} {post.user.username}
@@ -9,4 +9,4 @@
 	</small>
 </div>
 
-<div>{post.content}</div>
+<div class="mini-content">{post.content}</div>
