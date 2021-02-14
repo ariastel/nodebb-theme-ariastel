@@ -10,7 +10,8 @@
 		{ "hook": "filter:middleware.renderFooter", "method": "renderFooter" }
 	],
 	"staticDirs": {
-		"fonts": "static/fonts"
+		"fonts": "static/fonts",
+		"images": "static/images"
 	},
 	"scripts": [
 		"public/ariastel.js",

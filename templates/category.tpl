@@ -1,8 +1,19 @@
 {{{ if superCategory }}}
 	<div class="aa_category__header" style="background-image: url({{ superCategory.headerBG }}); background-color: {{ superCategory.headerBGColor }}"></div>
-{{{ end }}}
-
-{{{ if superCategory }}}
+	
+	<section class="ch_pinned-section">
+		<div class="container">
+			<h2 class="ch_pinned-section__header">[[custom-homepage:pinned-news]]</h2>
+			<ul class="ch_pinned-section__list container">
+				{{{ each pinnedNews }}}
+					<li class="ch_pinned-section__list-item">
+						<!-- IMPORT plugins/custom-homepage/partials/news.tpl -->
+					</li>
+				{{{ end }}}
+			</ul>
+		</div>
+	</section>
+	
 	<div class="aa_category__holder">
 		<div class="aa_category__holder__container" style="background-color: {{ superCategory.pageBGColor }};">
 			<img src="{{ superCategory.pageBG }}" class="aa_category__holder__bg hidden-xs hidden-sm hidden-md" />
