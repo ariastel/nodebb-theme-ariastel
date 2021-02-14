@@ -97,16 +97,18 @@ main {
   }
 }
 
-
 .page-category #content {
   width: auto;
   padding: 0;
 }
 
+.page-category #panel #content>.container {
+  padding-top: 40px !important;
+}
+
 .aa_category__header {
   width: 100%;
   height: 150px;
-  margin-bottom: 20px;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -139,8 +141,30 @@ main {
   .aa_topic__author {
     color: @brand-primary;
   }
-  
+
   .aa_topic__counter {
     margin-right: 8px;
+  }
+}
+
+.aa_category__holder {
+  padding-top: 20px;
+  position: relative;
+
+  &__container {
+    position: absolute;
+    text-align: right;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__bg {
+    max-width: 100%;
+    max-height: 100%;
+    position: sticky;
+    top: 10%;
+    right: 0;
   }
 }

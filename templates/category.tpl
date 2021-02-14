@@ -2,6 +2,13 @@
 	<div class="aa_category__header" style="background-image: url({{ superCategory.headerBG }}); background-color: {{ superCategory.headerBGColor }}"></div>
 {{{ end }}}
 
+{{{ if superCategory }}}
+	<div class="aa_category__holder">
+		<div class="aa_category__holder__container" style="background-color: {{ superCategory.pageBGColor }};">
+			<img src="{{ superCategory.pageBG }}" class="aa_category__holder__bg hidden-xs hidden-sm hidden-md" />
+		</div>
+{{{ end }}}
+
 <div class="container">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 	<div data-widget-area="header">
@@ -13,7 +20,7 @@
 		<div class="category <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
 			<!-- IMPORT partials/category/subcategory.tpl -->
 
-			<div class="topic-list-header clearfix">
+			<div class="topic-list-header clearfix"{{{ if superCategory }}} style="background-color: {{ superCategory.pageBGColor }}; border-color: {{ superCategory.pageBGColor }}"{{{ end }}}>
 				<!-- IF privileges.topics:create -->
 				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
 				<!-- ELSE -->
@@ -67,3 +74,7 @@
 	<!-- ENDIF !config.usePagination -->
 
 </div>
+
+{{{ if superCategory }}}
+	</div>
+{{{ end }}}
