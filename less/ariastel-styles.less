@@ -113,16 +113,12 @@ main {
   background-repeat: no-repeat;
   background-position: center bottom;
 
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @screen-md-min) {
     height: 250px;
   }
 
-  @media (min-width: @screen-md-min) {
-    height: 350px;
-  }
-
   @media (min-width: @screen-lg-min) {
-    height: 450px;
+    height: 350px;
   }
 }
 
@@ -167,4 +163,33 @@ main {
     top: 10%;
     right: 0;
   }
+}
+
+.breadcrumb {
+  font-size: 14px !important;
+  font-weight: bold;
+
+  a {
+    color: @black-color  !important;
+  }
+
+  span {
+    position: relative;
+  }
+
+  >:not(.active) a span:after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    bottom: 0px;
+    background: red;
+    left: 0;
+    right: 0;
+  }
+}
+
+.categories>li .content h2,
+.category>ul>li .content h2 {
+  font-weight: bold;
+  font-size: 16px !important;
 }
