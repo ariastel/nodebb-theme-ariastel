@@ -15,7 +15,7 @@
 	</section>
 	
 	<div class="aa_category__holder">
-		<div class="aa_category__holder__container" style="background-color: {{ superCategory.pageBGColor }};">
+		<div class="aa_category__holder__container">
 			<img src="{{ superCategory.pageBG }}" class="aa_category__holder__bg hidden-xs hidden-sm hidden-md" />
 		</div>
 {{{ end }}}
@@ -31,7 +31,7 @@
 		<div class="category <!-- IF widgets.sidebar.length -->col-lg-8 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
 			<!-- IMPORT partials/category/subcategory.tpl -->
 
-			<div class="topic-list-header clearfix"{{{ if superCategory }}} style="background-color: {{ superCategory.pageBGColor }}; border-color: {{ superCategory.pageBGColor }}"{{{ end }}}>
+			<div class="topic-list-header clearfix">
 				<!-- IF privileges.topics:create -->
 				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
 				<!-- ELSE -->

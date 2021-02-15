@@ -145,7 +145,7 @@ main {
 }
 
 .aa_category__holder {
-  padding-top: 20px;
+  padding: 20px 0;
   position: relative;
 
   &__container {
@@ -158,11 +158,20 @@ main {
   }
 
   &__bg {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
     position: sticky;
-    top: 10%;
+    top: 0;
     right: 0;
+    z-index: -1;
+  }
+
+  &>.container {
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  & .topic-list-header {
+    background: transparent;
+    border-color: transparent;
   }
 }
 
