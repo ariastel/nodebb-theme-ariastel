@@ -4,7 +4,7 @@
 	{{{end}}}
 </div>
 <div class="row">
-	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
+	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-8 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
 		<div class="topic-header">
 			<h1 component="post/header" class="" itemprop="name">
 				<span class="topic-title" component="topic/title">
@@ -80,7 +80,7 @@
 
 		<!-- IMPORT partials/topic/navigator.tpl -->
 	</div>
-	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
+	<div data-widget-area="sidebar" class="col-lg-4 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
 		{{{each widgets.sidebar}}}
 		{{widgets.sidebar.html}}
 		{{{end}}}

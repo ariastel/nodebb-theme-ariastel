@@ -28,7 +28,7 @@
 		{{{end}}}
 	</div>
 	<div class="row">
-		<div class="category <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
+		<div class="category <!-- IF widgets.sidebar.length -->col-lg-8 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
 			<!-- IMPORT partials/category/subcategory.tpl -->
 
 			<div class="topic-list-header clearfix"{{{ if superCategory }}} style="background-color: {{ superCategory.pageBGColor }}; border-color: {{ superCategory.pageBGColor }}"{{{ end }}}>
@@ -66,7 +66,7 @@
 				<!-- IMPORT partials/paginator.tpl -->
 			<!-- ENDIF config.usePagination -->
 		</div>
-		<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
+		<div data-widget-area="sidebar" class="col-lg-4 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
 			{{{each widgets.sidebar}}}
 			{{widgets.sidebar.html}}
 			{{{end}}}
