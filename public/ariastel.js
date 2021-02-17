@@ -241,6 +241,9 @@ $(document).ready(function () {
 
 			navSlideout
 				.ignore('code, code *, .preventSlideout, .preventSlideout *')
+				.ignore('[component="account/cover"].active')
+				.ignore('.cropper, .cropper *')
+				.ignore('[data-pullin-ignore], [data-pullin-ignore] *')
 				.on('closed', onClose)
 				.on('beforeopen', onBeforeOpen)
 				.on('opened', function () {
