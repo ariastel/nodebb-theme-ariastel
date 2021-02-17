@@ -66,6 +66,11 @@ library.defineWidgetAreas = function(areas, callback) {
 			location: "header"
 		},
 		{
+			name: "Category Header outside Container",
+			template: "category.tpl",
+			location: "header_out"
+		},
+		{
 			name: "Topic Header",
 			template: "topic.tpl",
 			location: "header"
