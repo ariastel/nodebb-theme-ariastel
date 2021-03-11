@@ -1,4 +1,5 @@
 <ul class="nav nav-pills">
+	<li><a href="{config.relative_path}/users">[[ariastel:all-users]]</a></li>
 	<li><a href="{config.relative_path}/users?section=online">[[global:online]]</a></li>
 	<li><a href="{config.relative_path}/users?section=sort-posts">[[users:top_posters]]</a></li>
 	<!-- IF !reputation:disabled -->
