@@ -48,21 +48,14 @@
 				</small>
 				<!-- ENDIF !template.category -->
 
-				<!-- IF topics.tags.length -->
-				<span class="tag-list hidden-xs">
-					{{{each topics.tags}}}
-					<a href="{config.relative_path}/tags/{topics.tags.valueEscaped}"><span class="tag" style="<!-- IF topics.tags.color -->color: {topics.tags.color};<!-- ENDIF topics.tags.color --><!-- IF topics.tags.bgColor -->background-color: {topics.tags.bgColor};<!-- ENDIF topics.tags.bgColor -->">{topics.tags.valueEscaped}</span></a>
-					{{{end}}}
-					<small>&bull;</small>
-				</span>
-				<!-- ENDIF topics.tags.length -->
-
 				<small class="hidden-xs">
-					<a class="aa_topic__author" href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a> &bull; 
-					<span class="timeago" title="{topics.timestampISO}"></span> &bull;
-					<span class="aa_topic__counter human-readable-number stats-votes text-muted">{topics.votes} <i class="fa fa-fw fa-heart" title="[[global:votes]]"></i></span>
-					<span class="aa_topic__counter human-readable-number stats-postcount text-muted">{topics.postcount} <i class="fa fa-fw fa-pencil" title="[[global:posts]]"></i></span>
-					<span class="aa_topic__counter human-readable-number stats-viewcount text-muted">{topics.viewcount} <i class="fa fa-fw fa-eye" title="[[global:views]]"></i></span>
+					<span class="aa_topic__counter human-readable-number stats-votes text-muted"><i class="fa fa-fw fi-rr-heart" title="[[global:votes]]"></i> {topics.votes}</span>
+					<span class="aa_topic__counter human-readable-number stats-postcount text-muted"><i class="fa fa-fw fi-rr-comment" title="[[global:posts]]"></i> {topics.postcount}</span>
+					<span class="aa_topic__counter human-readable-number stats-viewcount text-muted"><i class="fa fa-fw fi-rr-eye" title="[[global:views]]"></i> {topics.viewcount}</span>
+				</small>
+				<small class="hidden-xs pull-right">
+					<span class="timeago" title="{topics.timestampISO}"></span> by
+					<a class="aa_topic__author" href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a> 
 				</small>
 				<small class="visible-xs-inline">
 					<!-- IF topics.teaser.timestamp -->
@@ -79,7 +72,7 @@
 		</div>
 
 		<div class="col-md-4 col-sm-3 teaser hidden-xs" component="topic/teaser">
-			<div class="card" style="border-color: {topics.category.bgColor}">
+			<div class="card">
 				<!-- IF topics.unreplied -->
 				<p>
 					[[category:no_replies]]

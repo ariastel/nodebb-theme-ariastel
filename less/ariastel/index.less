@@ -1,1 +1,49 @@
+@import "variables";
+@import "uicons";
+
 @import "news-item";
+@import "subcat-item";
+
+
+[component="category/watching"] {
+  color: @gray-text-color  !important;
+  border-color: @gray-text-color  !important;
+
+  &:hover {
+    background-color: @red-color  !important;
+  }
+}
+
+[component="category/notwatching"] {
+  background-color: @red-color  !important;
+  color: @white-color  !important;
+
+  &:hover {
+    background-color: @white-color  !important;
+    color: @gray-text-color  !important;
+  }
+}
+
+[component="category/topic"] {
+  margin-bottom: 10px;
+  border-bottom: 1px solid @gray-text-color !important;
+  padding-bottom: 0;
+
+  &:hover .content {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 70px;
+      right: 0;
+      height: 1px;
+      background: red;
+    }
+  }
+
+  &:hover {
+    background-color: @white-color;
+  }
+}
