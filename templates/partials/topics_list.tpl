@@ -43,17 +43,17 @@
 				<!-- ENDIF !topics.noAnchor -->
 
 				<!-- IF !template.category -->
-				<small>
+				<small class="pull-left topic-item__footer">
 					<a href="{config.relative_path}/category/{topics.category.slug}"><span class="fa-stack fa-lg" style="{function.generateCategoryBackground, topics.category}"><i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i></span> {topics.category.name}</a> &bull;
 				</small>
 				<!-- ENDIF !template.category -->
 
-				<small class="hidden-xs">
+				<small class="hidden-xs pull-left topic-item__footer">
 					<span class="aa_topic__counter human-readable-number stats-votes text-muted"><i class="fa fa-fw fi-rr-heart" title="[[global:votes]]"></i> {topics.votes}</span>
 					<span class="aa_topic__counter human-readable-number stats-postcount text-muted"><i class="fa fa-fw fi-rr-comment" title="[[global:posts]]"></i> {topics.postcount}</span>
 					<span class="aa_topic__counter human-readable-number stats-viewcount text-muted"><i class="fa fa-fw fi-rr-eye" title="[[global:views]]"></i> {topics.viewcount}</span>
 				</small>
-				<small class="hidden-xs pull-right">
+				<small class="hidden-xs pull-right topic-item__footer">
 					<span class="timeago" title="{topics.timestampISO}"></span> by
 					<a class="aa_topic__author" href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a> 
 				</small>
