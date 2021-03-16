@@ -1,7 +1,9 @@
 <li component="categories/category" data-cid="{../cid}" data-numRecentReplies="1" class="aa_cat-item">
 	<meta itemprop="name" content="{../name}">
 
-		<div class="icon aa_cat-item__icon" style="{function.generateCategoryBackground}"></div>
+		{{{ if ../backgroundImage }}}
+			<div class="icon aa_cat-item__icon" style="{function.generateCategoryBackground}"></div>
+		{{{ end }}}
 
 		<div class="aa_cat-item__content">
 			<h2 class="title aa_cat-item__title">
