@@ -1,4 +1,29 @@
+.subcategory .categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .aa__subcat-item {
+
+  position: relative;
+
+  margin-right: 8px;
+  margin-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 calc(100% - 8px);
+  
+  @media (min-width: @screen-xs) {
+    flex: 0 calc(50% - 8px);
+  }
+  
+  @media (min-width: @screen-md) {
+    flex: 0 calc(25% - 8px);
+  }
+
   text-align: center;
   border-radius: 3px;
   background-color: @white-color;
@@ -20,5 +45,14 @@
   & a {
     display: block;
     color: @dark-text-color;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
   }
 }
