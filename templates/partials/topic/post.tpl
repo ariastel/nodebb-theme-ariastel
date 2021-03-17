@@ -59,22 +59,6 @@
 	{{{ end }}}
 
 	<div class="clearfix">
-	{{{ if !hideReplies }}}
-	<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="threaded-replies no-select pull-left {{{ if !posts.replies.count }}}hidden{{{ end }}}">
-		<span component="post/reply-count/avatars" class="avatars {{{ if posts.replies.hasMore }}}hasMore{{{ end }}}">
-			{{{each posts.replies.users}}}
-			{buildAvatar(posts.replies.users, "xs", true, "")}
-			{{{end}}}
-		</span>
-
-		<span class="replies-count" component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>
-		<span class="replies-last hidden-xs">[[topic:last_reply_time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
-
-		<i class="fa fa-fw fa-chevron-right" component="post/replies/open"></i>
-		<i class="fa fa-fw fa-chevron-down hidden" component="post/replies/close"></i>
-		<i class="fa fa-fw fa-spin fa-spinner hidden" component="post/replies/loading"></i>
-	</a>
-	{{{ end }}}
 
 	<small class="pull-right">
 		<span class="post-tools">
