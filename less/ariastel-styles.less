@@ -152,7 +152,6 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
-    overflow: hidden;
   }
 
   &__bg {
@@ -161,6 +160,9 @@ main {
     top: 0;
     right: 0;
     z-index: -1;
+    object-position: top center;
+    object-fit: cover;
+    max-height: 100%;
   }
 
   &>.container {
