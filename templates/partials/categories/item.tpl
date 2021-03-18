@@ -2,7 +2,17 @@
 	<meta itemprop="name" content="{../name}">
 
 		{{{ if ../backgroundImage }}}
-			<div class="icon aa_cat-item__icon" style="{function.generateCategoryBackground}"></div>
+			<!-- IF ../isSection -->
+				<div class="icon aa_cat-item__icon" style="{function.generateCategoryBackground}"></div>
+			<!-- ELSE -->
+				<!-- IF ../link -->
+					<a href="{../link}" itemprop="url" class="aa_cat-item__icon-link">
+				<!-- ELSE -->
+					<a href="{config.relative_path}/category/{../slug}" itemprop="url" class="aa_cat-item__icon-link">
+				<!-- ENDIF ../link -->
+					<div class="icon aa_cat-item__icon" style="{function.generateCategoryBackground}"></div>
+				</a>
+			<!-- ENDIF ../isSection -->
 		{{{ end }}}
 
 		<div class="aa_cat-item__content">

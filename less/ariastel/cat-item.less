@@ -7,19 +7,26 @@
   &__icon {
     width: 100px;
     height: 100px;
-    margin-right: 16px;
     background-color: transparent !important;
     background-repeat: no-repeat !important;
 
     @media (min-width: @screen-md) {
       width: 125px;
       height: 125px;
-      margin-right: 24px;
     }
 
     @media (min-width: @screen-lg) {
       width: 150px;
       height: 150px;
+    }
+
+    &-link {
+      margin-right: 16px;
+      border-radius: 50%;
+
+      @media (min-width: @screen-md) {
+        margin-right: 24px;
+      }
     }
   }
 
@@ -57,7 +64,6 @@
       font-weight: bold;
       display: block;
       border-left: 1px solid @red-color;
-      border-right: 1px solid @red-color;
       margin-bottom: 0 !important;
 
       a {
