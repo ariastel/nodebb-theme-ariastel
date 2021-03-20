@@ -65,3 +65,33 @@
     color: @red-color  !important;
   }
 }
+
+.posts [component="post"][data-index="0"] {
+  .avatar {
+    width: 40px !important;
+    height: 40px !important;
+    margin-left: -8px;
+
+    @media (min-width: @screen-sm) {
+      width: 70px !important;
+      height: 70px !important;
+      margin-left: -10px;
+    }
+  }
+
+  & .status {
+    font-size: 16px !important;
+
+    @media (min-width: @screen-sm) {
+      font-size: 20px !important;
+    }
+  }
+
+  & [itemprop="author"] {
+    font-size: 140%;
+  }
+
+  &+[data-index="1"] {
+    border-top: 2px solid #facccc !important;
+  }
+}

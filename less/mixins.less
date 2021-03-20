@@ -52,7 +52,11 @@
 	.posts > [component="post"], .timeline-event {
 		position: relative;	// for absolutely positioned pseudo-element, below
 		border-left: 2px solid lighten(@brand-primary, 30%);
-		margin-left: 2.5rem;
+		margin-left: 3.5rem;
+		
+		@media (max-width: @screen-sm-max) {
+			margin-left: 2.5rem;
+		}
 
 		&:not(:last-child) {
 			padding-bottom: @post-padding;
@@ -99,7 +103,11 @@
 			}
 
 			&+:not(.timeline-event):before {
-				left: calc(2rem + 1px);
+				left: calc(3rem + 1px);
+				
+				@media (max-width: @screen-sm-max) {
+					left: calc(2rem + 1px);
+				}
 			}
 
 			&+.timeline-event:before {
