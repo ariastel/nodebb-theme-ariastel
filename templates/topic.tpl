@@ -21,9 +21,11 @@
 			<div class="topic-info clearfix">
 				<div class="category-item inline-block">
 					{{{ if category.icon }}}
-					<div role="presentation" class="icon pull-left" style="{{{ if category.bgColor }}}background-color: {category.bgColor};{{{end}}}; {{{ if category.color}}}color: {category.color};{{{end}}}">
-						<i class="fa fa-fw {category.icon}"></i>
-					</div>
+						{{{ if category.backgroundImage }}}
+						<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, category}">
+							<i class="fa fa-fw {category.icon}"></i>
+						</div>
+						{{{ end }}}
 					{{{ end }}}
 					<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
 

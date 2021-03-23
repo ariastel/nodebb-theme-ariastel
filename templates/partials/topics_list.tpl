@@ -44,7 +44,12 @@
 
 				<!-- IF !template.category -->
 				<small class="pull-left topic-item__footer">
-					<a href="{config.relative_path}/category/{topics.category.slug}"><span class="fa-stack fa-lg" style="{function.generateCategoryBackground, topics.category}"><i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i></span> {topics.category.name}</a> &bull;
+					<a href="{config.relative_path}/category/{topics.category.slug}">
+						<!-- IF topics.category.backgroundImage -->
+						<span class="fa-stack fa-lg" style="{function.generateCategoryBackground, topics.category}">
+							<i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i>
+						</span>
+						<!-- ENDIF topics.category.backgroundImage --> {topics.category.name}</a> &bull;
 				</small>
 				<!-- ENDIF !template.category -->
 
