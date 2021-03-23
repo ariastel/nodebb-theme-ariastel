@@ -73,12 +73,6 @@
 						<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">
 						<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu" aria-labelledby="user_dropdown">
 							<li>
-								<a component="header/profilelink" href="{relative_path}/user/{user.userslug}">
-									<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
-								</a>
-							</li>
-							<li role="presentation" class="divider"></li>
-							<li>
 								<a href="#" class="user-status" data-status="online">
 									<i class="fa fa-fw fa-circle status online"></i><span <!-- IF user.online -->class="bold"<!-- ENDIF user.online -->> [[global:online]]</span>
 								</a>
@@ -99,6 +93,11 @@
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
+							<li>
+								<a component="header/profilelink" href="{relative_path}/user/{user.userslug}">
+									<i class="fa fa-fw fa-user"></i> <span>[[user:profile]]</span>
+								</a>
+							</li>
 							<li>
 								<a component="header/profilelink/edit" href="{relative_path}/user/{user.userslug}/edit">
 									<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
