@@ -49,7 +49,7 @@
 						<span class="fa-stack fa-lg" style="{function.generateCategoryBackground, topics.category}">
 							<i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i>
 						</span>
-						<!-- ENDIF topics.category.backgroundImage --> {topics.category.name}</a> &bull;
+						<!-- ENDIF topics.category.backgroundImage -->{topics.category.name}</a> &bull;
 				</small>
 				<!-- ENDIF !template.category -->
 
