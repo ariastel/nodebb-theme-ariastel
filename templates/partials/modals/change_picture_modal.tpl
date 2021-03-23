@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-xs-6 col-sm-8 col-md-6">
+	<div class="col-xs-12 col-md-6">
 		<div class="list-group media">
 			<button type="button" class="list-group-item" data-type="default">
 				<div class="media-left">
@@ -25,37 +25,24 @@
 			{{{end}}}
 		</div>
 	</div>
-	<div class="col-xs-6 col-sm-4 col-md-6">
+	<div class="col-xs-12 col-md-6">
 		<div class="btn-group-vertical btn-block" role="group">
 			<!-- IF allowProfileImageUploads -->
 			<button type="button" class="btn btn-default" data-action="upload">
-				<span class="hidden-xs hidden-sm">
+				<span>
 					[[user:upload_new_picture]]
-				</span>
-				<span class="visible-xs-inline visible-sm-inline">
-					<i class="fa fa-plus"></i>
-					<i class="fa fa-upload"></i>
 				</span>
 			</button>
 			<!-- ENDIF allowProfileImageUploads -->
 			<button type="button" class="btn btn-default" data-action="upload-url">
-				<span class="hidden-xs hidden-sm">
+				<span>
 					[[user:upload_new_picture_from_url]]
-				</span>
-				<span class="visible-xs-inline visible-sm-inline">
-					<i class="fa fa-plus"></i>
-					<i class="fa fa-link"></i>
 				</span>
 			</button>
 			<!-- IF uploaded -->
 			<button type="button" class="btn btn-default" data-action="remove-uploaded">
-				<span class="hidden-xs hidden-sm">
+				<span>
 					[[user:remove_uploaded_picture]]
-				</span>
-				<span class="visible-xs-inline visible-sm-inline">
-					<i class="fa fa-picture-o"></i>
-					<i class="fa fa-long-arrow-right"></i>
-					<i class="fa fa-trash-o"></i>
 				</span>
 			</button>
 			<!-- ENDIF uploaded -->
