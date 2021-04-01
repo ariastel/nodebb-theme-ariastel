@@ -73,7 +73,11 @@
 		</div>
 
 		<div class="mobile-stat col-xs-2 visible-xs text-right">
-			<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
+			<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+				<span class="human-readable-number stats-votes text-muted"><i class="fa fa-fw fi-rr-heart" title="[[global:votes]]"></i> {topics.votes}</span>
+				<span class="human-readable-number stats-postcount text-muted"><i class="fa fa-fw fi-rr-comment" title="[[global:posts]]"></i> {topics.postcount}</span>
+				<span class="human-readable-number stats-viewcount text-muted"><i class="fa fa-fw fi-rr-eye" title="[[global:views]]"></i> {topics.viewcount}</span>
+			</a>
 		</div>
 
 		<div class="col-md-4 col-sm-3 teaser hidden-xs" component="topic/teaser">
