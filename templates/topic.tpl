@@ -20,6 +20,17 @@
 
 			<div class="topic-info clearfix">
 				<div class="category-item inline-block">
+					{{{ if superCategory }}}
+						{{{ if superCategory.icon }}}
+							{{{ if superCategory.backgroundImage }}}
+							<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, superCategory}">
+								<i class="fa fa-fw {superCategory.icon}"></i>
+							</div>
+							{{{ end }}}
+						{{{ end }}}
+						<a href="{config.relative_path}/category/{superCategory.slug}">{superCategory.name}</a> - 
+					{{{ end }}}
+
 					{{{ if category.icon }}}
 						{{{ if category.backgroundImage }}}
 						<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, category}">
