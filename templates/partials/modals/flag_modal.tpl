@@ -9,7 +9,7 @@
 			</div>
 			<div class="modal-body">
 				<p class="lead">
-					[[flags:modal-body, {type}, {id}]]
+					[[flags:modal-body, [[flags:modal-type-{type}, {name}]]]]
 				</p>
 				<div class="btn-group btn-group-justified">
 					<div class="btn-group">
