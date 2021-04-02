@@ -289,7 +289,7 @@ $(document).ready(function () {
 
 			socket.on('event:user_status_change', function (data) {
 				if (parseInt(data.uid, 10) === app.user.uid) {
-					app.updateUserStatus($('#menu [component="user/status"]'), data.status);
+					app.updateUserStatus($('#menu [component="user/status"], #header-menu [component="user/status"]'), data.status);
 					navSlideout.close();
 				}
 			});
