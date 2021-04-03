@@ -12,7 +12,7 @@
 		</li>
 		{{{each categories}}}
 		<li role="presentation" class="category <!-- IF categories.disabledClass -->disabled<!-- ENDIF categories.disabledClass -->" data-cid="{categories.cid}" data-name="{categories.name}" data-parent-cid="{categories.parentCid}">
-			<a role="menu-item">{categories.level}<span component="category-markup"><!-- IF categories.icon --><span class="fa-stack" style="{function.generateCategoryBackground}"><i style="color: {categories.color};" class="fa fa-stack-1x fa-fw {categories.icon}"></i></span><!-- ENDIF categories.icon --> {categories.name}</span></a>
+			<a role="menu-item">{categories.level}<span component="category-markup">{{{ if categories.backgroundImage }}}<span class="fa-stack" style="{function.generateCategoryBackground}">{{{ if categories.icon }}}<i style="color: {categories.color};" class="fa fa-stack-1x fa-fw {categories.icon}"></i>{{{ end }}}</span>{{{ end }}} {categories.name}</span></a>
 		</li>
 		{{{end}}}
 	</ul>
