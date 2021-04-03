@@ -63,9 +63,9 @@
 					<a class="aa_topic__author" href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a> 
 				</small>
 				<!-- IF topics.teaser.timestamp -->
-				<span class="pull-left topic-item__footer timeago visible-xs-inline" title="{topics.teaser.timestampISO}"></span>
+				<small class="pull-left topic-item__footer timeago visible-xs-inline" title="{topics.teaser.timestampISO}"></small>
 				<!-- ELSE -->
-				<span class="pull-left topic-item__footer timeago visible-xs-inline" title="{topics.timestampISO}"></span>
+				<small class="pull-left topic-item__footer timeago visible-xs-inline" title="{topics.timestampISO}"></small>
 				<!-- ENDIF topics.teaser.timestamp -->
 			</h2>
 		</div>
