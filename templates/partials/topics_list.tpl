@@ -62,13 +62,11 @@
 					<span class="timeago" title="{topics.timestampISO}"></span> by
 					<a class="aa_topic__author" href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a> 
 				</small>
-				<small class="visible-xs-inline">
-					<!-- IF topics.teaser.timestamp -->
-					<span class="timeago" title="{topics.teaser.timestampISO}"></span>
-					<!-- ELSE -->
-					<span class="timeago" title="{topics.timestampISO}"></span>
-					<!-- ENDIF topics.teaser.timestamp -->
-				</small>
+				<!-- IF topics.teaser.timestamp -->
+				<span class="pull-left topic-item__footer timeago visible-xs-inline" title="{topics.teaser.timestampISO}"></span>
+				<!-- ELSE -->
+				<span class="pull-left topic-item__footer timeago visible-xs-inline" title="{topics.timestampISO}"></span>
+				<!-- ENDIF topics.teaser.timestamp -->
 			</h2>
 		</div>
 
