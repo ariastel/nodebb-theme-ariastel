@@ -100,6 +100,11 @@
 								</a>
 							</li>
 							<li>
+								<a href="{relative_path}/user/{user.userslug}/bookmarks">
+									<i class="fa fa-fw fa-heart-o"></i> <span>[[user:bookmarks]]</span>
+								</a>
+							</li>
+							<li>
 								<a component="header/profilelink/edit" href="{relative_path}/user/{user.userslug}/edit">
 									<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
 								</a>
