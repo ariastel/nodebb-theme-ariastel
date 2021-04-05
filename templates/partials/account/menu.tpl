@@ -64,7 +64,9 @@
 		<!-- IF !reputation:disabled -->
 		<li><a href="{config.relative_path}/user/{userslug}/best">[[global:best]] <span class="badge badge-default pull-right formatted-number" title="{counts.best}">{counts.best}</span></a></li>
 		<!-- ENDIF !reputation:disabled -->
+		<!-- IF isAdminOrGlobalModeratorOrModerator -->
 		<li><a href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]] <span class="badge badge-default pull-right formatted-number" title="{counts.groups}">{counts.groups}</span></a></li>
+		<!-- ENDIF isAdminOrGlobalModeratorOrModerator -->
 
 		<!-- IF showHidden -->
 		<li><a href="{config.relative_path}/user/{userslug}/categories">[[user:watched_categories]] <span class="badge badge-default pull-right formatted-number" title="{counts.categoriesWatched}">{counts.categoriesWatched}</span></a></li>
@@ -77,7 +79,9 @@
 		<li><a href="{config.relative_path}/user/{userslug}/downvoted">[[global:downvoted]] <span class="badge badge-default pull-right formatted-number" title="{counts.downvoted}">{counts.downvoted}</span></a></li>
 		<!-- ENDIF !downvote:disabled -->
 		<!-- ENDIF !reputation:disabled -->
+		<!-- IF isAdminOrGlobalModeratorOrModerator -->
 		<li><a href="{config.relative_path}/user/{userslug}/uploads">[[global:uploads]] <span class="badge badge-default pull-right formatted-number" title="{counts.uploaded}">{counts.uploaded}</span></a></li>
+		<!-- ENDIF isAdminOrGlobalModeratorOrModerator -->
 		<!-- ENDIF showHidden -->
 
 		{{{each profile_links}}}

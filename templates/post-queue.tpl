@@ -7,9 +7,11 @@
 	<div class="col-xs-12">
 		<div class="post-queue preventSlideout posts-list">
 			{{{ if !posts.length }}}
-			<p class="panel-body">
-				[[post-queue:description, {config.relative_path}/admin/settings/post#post-queue]]
-			</p>
+				{{{ if isAdmin }}}
+				<p class="panel-body">
+					[[post-queue:description, {config.relative_path}/admin/settings/post#post-queue]]
+				</p>
+				{{{ end }}}
 			{{{ end }}}
 
 			{{{ each posts }}}
