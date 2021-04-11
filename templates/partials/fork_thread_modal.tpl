@@ -4,7 +4,7 @@
 	</div>
 	<div class="panel-body">
 		<div class="form-group">
-			<label for="title">[[topic:title]]</label>
+			<label for="fork-title">[[topic:title]]</label>
 			<input id="fork-title" type="text" class="form-control" placeholder="[[topic:enter-new-topic-title]]">
 		</div>
 		<p>

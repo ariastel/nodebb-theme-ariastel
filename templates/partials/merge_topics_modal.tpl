@@ -31,7 +31,7 @@
 		</p>
 		<form>
 			<p>
-				<input class="merge-main-topic-radio" type="radio" name="merge-topic-option" checked="true"> [[topic:merge-select-main-topic]]
+				<label><input class="merge-main-topic-radio" type="radio" name="merge-topic-option" checked="true"> [[topic:merge-select-main-topic]]</label>
 			</p>
 			<p>
 				<select class="form-control merge-main-topic-select">
@@ -41,7 +41,7 @@
 				</select>
 			</p>
 			<p>
-				<input class="merge-new-title-radio" type="radio" name="merge-topic-option"> [[topic:merge-new-title-for-topic]]
+				<label><input class="merge-new-title-radio" type="radio" name="merge-topic-option"> [[topic:merge-new-title-for-topic]]</label>
 			</p>
 			<p>
 				<input class="merge-new-title-input form-control" type="text">
