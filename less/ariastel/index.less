@@ -81,15 +81,29 @@
 }
 
 .posts [component="post"][data-index="0"] {
+  padding-top: 20px;
+
   .avatar {
     width: 40px !important;
     height: 40px !important;
     margin-left: -8px;
 
-    @media (min-width: @screen-sm) {
-      width: 70px !important;
-      height: 70px !important;
-      margin-left: -10px;
+    @media (min-width: @screen-md) {
+      width: 80px !important;
+      height: 80px !important;
+      margin-left: -15px;
+    }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    .post-header {
+      margin-left: 2rem !important;
+    }
+  }
+
+  @media (min-width: @screen-md) {
+    .content {
+      margin-top: -67px;
     }
   }
 
@@ -105,8 +119,8 @@
     font-size: 140%;
   }
 
-  &+[data-index="1"] {
-    border-top: 2px solid #facccc !important;
+  & {
+    border-bottom: 2px solid #facccc !important;
   }
 }
 
