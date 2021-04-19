@@ -1,0 +1,42 @@
+button[component="category/watching"],
+button[component="category/notwatching"] {
+  &:before {
+    font-family: uicons-regular-rounded !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+
+
+button[component="category/watching"] {
+  color: @white-color  !important;
+
+  &:before {
+    content: "\f12a";
+  }
+
+  &:hover {
+    background-color: @white-color  !important;
+    color: @gray-text-color  !important;
+  }
+}
+
+button[component="category/notwatching"] {
+  color: @gray-text-color  !important;
+  border-color: @gray-text-color  !important;
+  background-color: @white-color  !important;
+
+  &:before {
+    content: "\f12c";
+  }
+
+  &:hover {
+    background-color: @red-color  !important;
+    color: @white-color  !important;
+  }
+}

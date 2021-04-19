@@ -1,31 +1,12 @@
-@import "variables";
-@import "uicons";
+@import "./variables.less";
+@import "./uicons.less";
 
-@import "news-item";
-@import "cat-item";
-@import "subcat-item";
+@import "./news-item.less";
+@import "./cat-item.less";
+@import "./subcat-item.less";
+@import "./account-category.less";
+@import "./watch-buttons.less";
 
-
-[component="category/watching"] {
-  color: @gray-text-color  !important;
-  border-color: @gray-text-color  !important;
-  background-color: @white-color  !important;
-
-  &:hover {
-    background-color: @red-color  !important;
-    color: @white-color  !important;
-  }
-}
-
-[component="category/notwatching"] {
-  background-color: @red-color  !important;
-  color: @white-color  !important;
-
-  &:hover {
-    background-color: @white-color  !important;
-    color: @gray-text-color  !important;
-  }
-}
 
 [component="category/topic"] {
   margin-bottom: 10px;
