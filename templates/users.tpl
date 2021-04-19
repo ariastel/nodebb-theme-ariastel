@@ -7,16 +7,11 @@
 </div>
 <div class="users">
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-lg-7">
 		<!-- IMPORT partials/users_list_menu.tpl -->
 		</div>
-		<div class="col-xs-3 text-right">
-			<!-- IF showInviteButton -->
-			<button component="user/invite" class="btn btn-success"><i class="fa fa-users"></i> [[users:invite]]</button>
-			<!-- ENDIF showInviteButton -->
-		</div>
 		<!-- IF displayUserSearch -->
-		<div class="col-lg-3 col-xs-9">
+		<div class="col-lg-5">
 			<div class="search">
 				<div class="input-group">
 					<input class="form-control" id="search-user" type="text" placeholder="[[users:enter_username]]"/>
