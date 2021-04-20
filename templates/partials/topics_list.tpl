@@ -59,7 +59,7 @@
 					<span class="aa_topic__counter human-readable-number stats-viewcount text-muted"><i class="fa fa-fw fi-rr-eye" title="[[global:views]]"></i> {topics.viewcount}</span>
 				</small>
 				<small class="hidden-xs pull-right topic-item__footer">
-					<span class="timeago" title="{topics.timestampISO}"></span> by
+					<span class="timeago" title="{topics.timestampISO}"></span>,
 					<a class="aa_topic__author" href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a> 
 				</small>
 				<!-- IF topics.teaser.timestamp -->
@@ -72,9 +72,9 @@
 
 		<div class="mobile-stat col-xs-2 visible-xs text-right">
 			<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-				<span class="human-readable-number stats-votes text-muted"><i class="fa fa-fw fi-rr-heart" title="[[global:votes]]"></i> {topics.votes}</span>
-				<span class="human-readable-number stats-postcount text-muted"><i class="fa fa-fw fi-rr-comment" title="[[global:posts]]"></i> {topics.postcount}</span>
-				<span class="human-readable-number stats-viewcount text-muted"><i class="fa fa-fw fi-rr-eye" title="[[global:views]]"></i> {topics.viewcount}</span>
+				<span class="aa_topic__counter human-readable-number stats-votes text-muted">{topics.votes} <i class="fa fa-fw fi-rr-heart" title="[[global:votes]]"></i></span>
+				<span class="aa_topic__counter human-readable-number stats-postcount text-muted">{topics.postcount} <i class="fa fa-fw fi-rr-comment" title="[[global:posts]]"></i></span>
+				<span class="aa_topic__counter human-readable-number stats-viewcount text-muted">{topics.viewcount} <i class="fa fa-fw fi-rr-eye" title="[[global:views]]"></i></span>
 			</a>
 		</div>
 
