@@ -110,10 +110,6 @@ main {
   @media (min-width: @screen-md-min) {
     height: 250px;
   }
-
-  @media (min-width: @screen-lg-min) {
-    height: 350px;
-  }
 }
 
 .btn {
@@ -138,7 +134,21 @@ main {
   }
 
   .aa_topic__counter {
-    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .fa {
+      margin-left: 2px;
+    }
+
+    @media (min-width: @screen-sm) {
+      margin-right: 4px;
+
+      .fa {
+        margin-right: 2px;
+      }
+    }
   }
 }
 
