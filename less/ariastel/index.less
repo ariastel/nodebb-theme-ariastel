@@ -6,6 +6,7 @@
 @import "./subcat-item.less";
 @import "./account-category.less";
 @import "./watch-buttons.less";
+@import "./post.less";
 
 
 [component="category/topic"] {
@@ -58,54 +59,6 @@
   &,
   .pagination-text {
     color: @red-color  !important;
-  }
-}
-
-.posts [component="post"][data-index="0"] {
-  padding-top: 20px;
-
-  .avatar {
-    width: 40px !important;
-    height: 40px !important;
-    margin-left: -8px;
-
-    @media (min-width: @screen-md) {
-      width: 80px !important;
-      height: 80px !important;
-      margin-left: -15px;
-    }
-  }
-
-  .post-header {
-    padding-right: 1rem;
-  }
-
-  @media (max-width: @screen-sm-max) {
-    .post-header {
-      margin-left: 2rem !important;
-    }
-  }
-
-  @media (min-width: @screen-md) {
-    .content {
-      margin-top: -67px;
-    }
-  }
-
-  & .status {
-    font-size: 16px !important;
-
-    @media (min-width: @screen-sm) {
-      font-size: 20px !important;
-    }
-  }
-
-  & [itemprop="author"] {
-    font-size: 140%;
-  }
-
-  & {
-    border-bottom: 2px solid #facccc !important;
   }
 }
 
