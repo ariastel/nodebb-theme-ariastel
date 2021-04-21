@@ -186,11 +186,6 @@ $(document).ready(function () {
 			var swapped = !!Storage.getItem('ariastel:menus:legacy-layout');
 			var margin = window.innerWidth;
 
-			if (swapped) {
-				$('#mobile-menu').removeClass('pull-left');
-				$('#mobile-chats').addClass('pull-left');
-			}
-
 			if (document.documentElement.getAttribute('data-dir') === 'rtl') {
 				swapped = !swapped;
 			}
