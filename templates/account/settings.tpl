@@ -52,6 +52,15 @@
 					</label>
 				</div>
 				<!-- ENDIF !hideFullname -->
+
+				<!-- IF !hideAge -->
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="showage" <!-- IF settings.showage -->checked<!-- ENDIF settings.showage -->/> <strong>[[user:show_age]]</strong>
+					</label>
+				</div>
+				<!-- ENDIF !hideAge -->
+
 				<!-- IF !config.disableChat -->
 				<div class="checkbox">
 					<label>
