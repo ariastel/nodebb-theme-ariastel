@@ -1,5 +1,54 @@
 {{{ if superCategory }}}
-	<div class="aa_category__header" style="background-image: url({{ superCategory.headerBG }}); background-color: {{ superCategory.headerBGColor }}"></div>
+	<div class="aa_category__header" style="background-image: url({{ superCategory.headerBG }}); background-color: {{ superCategory.headerBGColor }}">
+		<div class="aa_category__header__links">
+			<ul class="aa_category__header__links-website">
+				{{{ if superCategory.website }}}
+					<li class="aa_category__header__website-item">
+						<a href="{superCategory.website}" target="_blank">
+							<i class="fa fa-fw fi-rr-globe" title="[[aa_super_categories:official-website]]"></i> <span>[[aa_super_categories:official-website]]</span>
+						</a>
+					</li>
+				{{{ end }}}
+				{{{ if superCategory.cybersport }}}
+					<li class="aa_category__header__website-item">
+						<a href="{superCategory.cybersport}" target="_blank">
+							<i class="fa fa-fw fi-rr-globe" title="[[aa_super_categories:cybersport-website]]"></i> <span>[[aa_super_categories:cybersport-website]]</span>
+						</a>
+					</li>
+				{{{ end }}}
+			</ul>
+			<ul class="aa_category__header__links-social">
+				{{{ if superCategory.vk }}}
+					<li class="aa_category__header__social-item">
+						<a href="{superCategory.vk}" target="_blank">
+							<i class="fa fa-fw fa-vk" title="[[aa_super_categories:vk]]"></i>
+						</a>
+					</li>
+				{{{ end }}}
+				{{{ if superCategory.youtube }}}
+					<li class="aa_category__header__social-item">
+						<a href="{superCategory.youtube}" target="_blank">
+							<i class="fa fa-fw fa-youtube-play" title="[[aa_super_categories:youtube]]"></i>
+						</a>
+					</li>
+				{{{ end }}}
+				{{{ if superCategory.twitter }}}
+					<li class="aa_category__header__social-item">
+						<a href="{superCategory.twitter}" target="_blank">
+							<i class="fa fa-fw fa-twitter" title="[[aa_super_categories:twitter]]"></i>
+						</a>
+					</li>
+				{{{ end }}}
+				{{{ if superCategory.facebook }}}
+					<li class="aa_category__header__social-item">
+						<a href="{superCategory.facebook}" target="_blank">
+							<i class="fa fa-fw fa-facebook-official" title="[[aa_super_categories:facebook]]"></i>
+						</a>
+					</li>
+				{{{ end }}}
+			</ul>
+		</div>
+	</div>
 {{{ end }}}
 
 <div data-widget-area="header_out">
