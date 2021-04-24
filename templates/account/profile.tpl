@@ -86,6 +86,8 @@
 			<span>[[user:age]]</span>
 			<strong>{age}</strong>
 			<!-- ENDIF age -->
+			
+			<!-- IMPORT partials/account/profile/rso_user_data.tpl -->
 		</div>
 	</div>
 
