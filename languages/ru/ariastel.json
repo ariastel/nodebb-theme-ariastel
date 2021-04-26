@@ -2,5 +2,7 @@
   "mobile-menu-side": "Отображать мобильное меню на правой стороне",
   "post-quick-reply": "Отправить быстрый ответ",
   "all-users": "Все",
-  "communities": "Сообщества"
+  "communities": "Сообщества",
+  "login-in-with": "Вход через %1",
+  "sign-in": "Авторизация"
 }

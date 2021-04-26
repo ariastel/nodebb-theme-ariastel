@@ -156,4 +156,36 @@ library.renderFooter = async function(data) {
 	return data;
 }
 
+library.addMetaToHeader = async function (payload) {
+
+  const settings = await meta.settings.get('ariastel');
+
+  if (settings?.cdnPreload) {
+    if (!payload?.templateValues?.linkTags) {
+      payload.templateValues.linkTags = [];
+    }
+    payload.templateValues.linkTags.push({
+      rel: 'preconnect',
+      href: settings.cdnPreload
+    })
+  }
+
+  return payload;
+}
+
+library.updateLoginStyles = async function (payload) {
+  const settings = await meta.settings.get('ariastel');
+  if (settings?.loginLogoUrl) {
+		payload.templateData.loginLogoUrl = settings.loginLogoUrl;
+	}
+  if (settings?.loginBgVideoUrl) {
+		payload.templateData.loginBgVideoUrl = settings.loginBgVideoUrl;
+  }
+	if (settings?.loginBgFormUrl) {
+		const values = settings.loginBgFormUrl.split('\n');
+		payload.templateData.loginBgFormUrl = values[Math.floor(Math.random() * values.length)].trim();
+	}
+	return payload;
+}
+
 module.exports = library;

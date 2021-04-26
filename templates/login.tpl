@@ -1,8 +1,18 @@
-<!-- IMPORT partials/breadcrumbs.tpl -->
+<div class="aa_login-video">
+	<video playsinline autoplay muted loop disablePictureInPicture poster="{loginBgVideoUrl}.png" class="aa_login-video__video hidden-xs">
+		<source src="{loginBgVideoUrl}.webm" type="video/webm">
+		<source src="{loginBgVideoUrl}.mp4" type="video/mp4">
+	</video>
+	<img src="{loginBgVideoUrl}.png" class="aa_login-video__video aa_login-video__video--mobile visible-xs" />
+</div>
 
-<div class="row">
+<div class="aa_login-form" style="background-image: url('{loginBgFormUrl}');">
+
+	<img src="{loginLogoUrl}" class="aa_login-form__logo" />
+	<h2 class="aa_login-form__header">[[ariastel:sign-in]]</h2>
+	
 	<!-- IF allowLocalLogin -->
-	<div class="<!-- IF alternate_logins -->col-md-8<!-- ELSE -->col-md-12<!-- ENDIF alternate_logins -->">
+	<div>
 		<div class="login-block">
 			<div class="alert alert-danger" id="login-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -12,14 +22,14 @@
 
 			<form class="form-horizontal" role="form" method="post" id="login-form">
 				<div class="form-group">
-					<label for="username" class="col-lg-2 control-label">{allowLoginWith}</label>
-					<div class="col-lg-10">
+					<label for="username" class="control-label">{allowLoginWith}</label>
+					<div>
 						<input class="form-control" type="text" placeholder="{allowLoginWith}" name="username" id="username" autocorrect="off" autocapitalize="off" value="{username}"/>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="password" class="col-lg-2 control-label">[[user:password]]</label>
-					<div class="col-lg-10">
+					<label for="password" class="control-label">[[user:password]]</label>
+					<div>
 						<input class="form-control" type="password" placeholder="[[user:password]]" name="password" id="password" <!-- IF username -->autocomplete="off"<!-- ENDIF username -->/>
 						<p id="caps-lock-warning" class="text-danger hidden">
 							<i class="fa fa-exclamation-triangle"></i> [[login:caps-lock-enabled]]
@@ -27,12 +37,10 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-lg-offset-2 col-lg-10">
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="remember" id="remember" checked /> [[login:remember_me]]
-							</label>
-						</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="remember" id="remember" checked /> [[login:remember_me]]
+						</label>
 					</div>
 				</div>
 				{{{each loginFormEntry}}}
@@ -44,7 +52,7 @@
 				<input type="hidden" name="_csrf" value="{config.csrf_token}" />
 				<input type="hidden" name="noscript" id="noscript" value="true" />
 				<div class="form-group">
-					<div class="col-lg-offset-2 col-lg-10">
+					<div>
 						<button class="btn btn-primary btn-lg btn-block" id="login" type="submit">[[global:login]]</button>
 						<!-- IF allowRegistration -->
 						<span>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a></span>
@@ -61,15 +69,16 @@
 	<!-- ENDIF allowLocalLogin -->
 
 	<!-- IF alternate_logins -->
-	<div class="<!-- IF allowLocalLogin -->col-md-4<!-- ELSE -->col-md-12<!-- ENDIF allowLocalLogin -->">
-		<div class="alt-login-block">
-			<h4>[[login:alternative_logins]]</h4>
-			<ul class="alt-logins">
-				{{{each authentication}}}
-				<li class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></li>
-				{{{end}}}
-			</ul>
-		</div>
+	<div class="alt-login-block">
+		<ul class="alt-logins">
+			{{{each authentication}}}
+				<li class="alt-logins__item {authentication.name}" style="border-color: {authentication.borderColor}; background: {authentication.backgroundColor};">
+					<a class="alt-logins__item__link" rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}" style="color: {authentication.textColor};">
+						<i class="fa {authentication.icon} fa-3x"></i>[[ariastel:login-in-with, {authentication.displayName}]]
+					</a>
+				</li>
+			{{{end}}}
+		</ul>
 	</div>
 	<!-- ENDIF alternate_logins -->
 </div>

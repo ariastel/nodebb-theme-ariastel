@@ -2,5 +2,7 @@
     "mobile-menu-side": "Switch which side each mobile menu is on",
     "post-quick-reply": "Post quick reply",
     "all-users": "All",
-    "communities": "Communities"
+    "communities": "Communities",
+    "login-in-with": "Login with %1",
+    "sign-in": "sign-in"
 }

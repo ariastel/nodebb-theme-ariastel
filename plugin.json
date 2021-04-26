@@ -7,7 +7,9 @@
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
 		{ "hook": "filter:topic.build", "method": "addUserToTopic" },
-		{ "hook": "filter:middleware.renderFooter", "method": "renderFooter" }
+		{ "hook": "filter:login.build", "method": "updateLoginStyles" },
+		{ "hook": "filter:middleware.renderFooter", "method": "renderFooter" },
+    { "hook": "filter:middleware.renderHeader", "method": "addMetaToHeader" }
 	],
 	"staticDirs": {
 		"fonts": "static/fonts",

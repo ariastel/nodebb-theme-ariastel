@@ -1,0 +1,131 @@
+.page-login #panel {
+  position: relative;
+}
+
+.aa_login-video {
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  &__video {
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    &--mobile {
+      display: none;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      z-index: -1;
+    }
+  }
+}
+
+
+.aa_login-form {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  z-index: 1;
+  margin: 0 auto;
+
+  background-color: @white-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: @screen-xs-min) {
+    top: 50px;
+    padding: 50px;
+    width: 350px;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    top: 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -8px;
+    right: -8px;
+    bottom: 8px;
+    border: 1px solid #808080;
+    z-index: -1;
+  }
+
+  &__logo {
+    display: block;
+    width: 135px;
+    margin: 12px auto;
+
+    @media (min-width: @screen-md-min) {
+      width: 180px;
+    }
+  }
+
+  &__header {
+    color: @red-color;
+    text-align: center;
+    font-size: 18px;
+    margin: 60px 0 16px;
+  }
+
+  #login-form {
+    text-align: center;
+  }
+
+  .alt-logins {
+    margin-left: 0;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 3px;
+      margin: 8px 0;
+
+      &__link {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        width: 100%;
+        height: 100%;
+
+        i,
+        img {
+          width: 30px;
+          height: 30px;
+          margin-right: 12px;
+          
+          font-size: 30px;
+          text-align: center;
+        }
+
+        &:hover,
+        &:active {
+          color: currentColor;
+        }
+      }
+
+      will-change: transform;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
