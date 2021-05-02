@@ -17,9 +17,9 @@
 		<span class="label label-danger">[[user:banned]]</span>
 		<!-- ENDIF posts.user.banned -->
 
-		<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+		<span>
 			<!-- IF posts.toPid -->
-			<a component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
+			<a component="post/parent" class="btn btn-xs btn-default" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> <!-- IF posts.parent.fullname -->{posts.parent.fullname}<!-- ELSE -->@<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --><!-- ENDIF posts.parent.displayname --></a>
 			<!-- ENDIF posts.toPid -->
 
 			<span>
