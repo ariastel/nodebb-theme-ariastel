@@ -1,7 +1,9 @@
 <div class="menu-profile">
 	<!-- IF user.uid -->
-	{buildAvatar(user, "lg", true, "user-icon")}
-	<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
+	<a href="{relative_path}/user/{user.userslug}">
+		{buildAvatar(user, "lg", true, "user-icon")}
+		<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
+	</a>
 	<!-- ENDIF user.uid -->
 </div>
 
