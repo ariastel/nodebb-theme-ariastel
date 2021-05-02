@@ -337,6 +337,11 @@
 		margin-left: 61px;
 		max-width: 100%;
 		word-wrap: break-word;
+
+		img {
+			max-width: 600px;
+			max-height: 300px;
+		}
 	}
 
 	@media (max-width: @screen-sm-max) {
@@ -685,7 +690,8 @@
 		background-color: initial;
 
 		>.post-header .icon:before {
-			border: 1px solid #5cb85c;
+				background: #fff;
+				border: 1px solid #5cb85c;
     		color: #5cb85c;
     		-webkit-transition: .2s ease-in-out all;
     		transition: .2s ease-in-out all;
