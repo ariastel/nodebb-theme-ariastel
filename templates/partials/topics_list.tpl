@@ -44,13 +44,24 @@
 
 				<!-- IF !template.category -->
 				<small class="pull-left topic-item__footer">
-					<a href="{config.relative_path}/category/{topics.category.slug}">
+					<a href="{config.relative_path}/category/{topics.category.slug}" class="topic-item__footer__cat">
 						<!-- IF topics.category.backgroundImage -->
 						<span class="fa-stack fa-lg" style="{function.generateCategoryBackground, topics.category}">
 							<i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i>
 						</span>
 						<!-- ENDIF topics.category.backgroundImage -->{topics.category.name}</a> &bull;
 				</small>
+				<!-- ELSE -->
+					{{{ if isNotEqual(topics.category.cid, cid) }}}
+					<small class="pull-left topic-item__footer">
+						<a href="{config.relative_path}/category/{topics.category.slug}" class="topic-item__footer__cat">
+							<!-- IF topics.category.backgroundImage -->
+							<span class="fa-stack fa-lg" style="{function.generateCategoryBackground, topics.category}">
+								<i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i>
+							</span>
+							<!-- ENDIF topics.category.backgroundImage -->{topics.category.name}</a> &bull;
+					</small>
+					{{{ end }}}
 				<!-- ENDIF !template.category -->
 
 				<small class="hidden-xs pull-left topic-item__footer">
