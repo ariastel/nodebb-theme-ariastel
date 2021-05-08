@@ -339,8 +339,13 @@
 		word-wrap: break-word;
 
 		img {
-			max-width: 600px;
-			max-height: 300px;
+			max-height: 200px;
+
+			@max-signature-width: 600px;
+			@media (min-width: @max-signature-width + 200px) {
+				max-width: @max-signature-width;
+				max-height: 250px;
+			}
 		}
 	}
 
