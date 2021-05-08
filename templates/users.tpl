@@ -31,8 +31,8 @@
 			<div class="avatar avatar-lg avatar-rounded">G</div>
 			<br/>
 			<div class="user-info">
+				<span>[[global:guests]]:</span>
 				<span id="online_anon_count">{anonymousUserCount}</span>
-				<span>[[global:guests]]</span>
 			</div>
 		</li>
 		<!-- ENDIF anonymousUserCount -->
