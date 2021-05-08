@@ -1,51 +1,62 @@
-.posts[component="topic"] [component="post"]:first-child {
-  padding-top: 20px;
-}
+.posts[component="topic"] [component="post"] {
 
-.posts[component="topic"] [component="post"][data-index="0"] {
-
-  .avatar {
-    width: 40px !important;
-    height: 40px !important;
-    margin-left: -8px;
-
-    @media (min-width: @screen-md) {
-      width: 80px !important;
-      height: 80px !important;
-      margin-left: -15px;
-    }
-  }
-
-  .post-header {
+  &.highlight .post-header {
     padding-right: 1rem;
   }
 
-  @media (max-width: @screen-sm-max) {
-    .post-header {
-      margin-left: 2rem !important;
+  .post--deleted-label { 
+    display: none;
+  }
+  &.deleted .post--deleted-label {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  &:first-child {
+    padding-top: 20px;
+  }
+
+  &[data-index="0"] {
+
+    .avatar {
+      width: 40px !important;
+      height: 40px !important;
+      margin-left: -8px;
+
+      @media (min-width: @screen-md) {
+        width: 80px !important;
+        height: 80px !important;
+        margin-left: -15px;
+      }
     }
-  }
 
-  @media (min-width: @screen-md) {
-    .content {
-      margin-top: -67px;
+    @media (max-width: @screen-sm-max) {
+      .post-header {
+        margin-left: 2rem !important;
+      }
     }
-  }
 
-  & .status {
-    font-size: 16px !important;
-
-    @media (min-width: @screen-sm) {
-      font-size: 20px !important;
+    @media (min-width: @screen-md) {
+      .content {
+        margin-top: -67px;
+      }
     }
-  }
 
-  & [itemprop="author"] {
-    font-size: 140%;
-  }
+    & .status {
+      font-size: 16px !important;
 
-  & {
-    border-bottom: 2px solid #facccc !important;
+      @media (min-width: @screen-sm) {
+        font-size: 20px !important;
+      }
+    }
+
+    & [itemprop="author"] {
+      font-size: 140%;
+    }
+
+    & {
+      border-bottom: 2px solid #facccc !important;
+    }
   }
 }
 
@@ -54,7 +65,7 @@
   flex-wrap: wrap;
   align-items: center;
 
-  & > * {
+  &>* {
     margin-right: 4px;
   }
 }
