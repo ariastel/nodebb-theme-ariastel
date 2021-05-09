@@ -55,44 +55,40 @@
 									<input type="checkbox" id="search-children"> [[search:search-child-categories]]
 								</div>
 								<div class="col-md-6">
-									<div class="form-group post-search-item">
-										<div class="row">
-											<div class="col-md-6">
-												<label>[[search:posted-by]]</label>
-												<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
-											</div>
-											<div class="col-md-6">
-												<label>[[search:has-tags]]</label>
-												<input type="text" class="form-control" id="has-tags">
-											</div>
-										</div>
-									</div>
+									<div class="row">
 
-									<div class="form-group post-search-item">
-										<label>[[search:reply-count]]</label>
-										<div class="row">
-											<div class="col-md-6">
+										<div class="form-group post-search-item col-md-6">
+											<label>[[search:posted-by]]</label>
+											<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
+										</div>
+
+										<div class="form-group post-search-item col-md-6">
+											<label>[[search:has-tags]]</label>
+											<input type="text" class="form-control" id="has-tags">
+										</div>
+
+										<div class="post-search-item col-md-6">
+											<label>[[search:reply-count]]</label>
+  										<div class="form-group">
 												<select id="reply-count-filter" class="form-control">
 													<option value="atleast">[[search:at-least]]</option>
 													<option value="atmost">[[search:at-most]]</option>
 												</select>
 											</div>
-											<div class="col-md-6">
+  										<div class="form-group">
 												<input type="text" class="form-control" id="reply-count">
 											</div>
 										</div>
-									</div>
 
-									<div class="form-group post-search-item">
-										<label>[[search:post-time]]</label>
-										<div class="row">
-											<div class="col-md-6">
+										<div class="post-search-item col-md-6">
+											<label>[[search:post-time]]</label>
+											<div class="form-group">
 												<select id="post-time-filter" class="form-control">
 													<option value="newer">[[search:newer-than]]</option>
 													<option value="older">[[search:older-than]]</option>
 												</select>
 											</div>
-											<div class="col-md-6">
+											<div class="form-group">
 												<select id="post-time-range" class="form-control">
 													<option value="">[[search:any-date]]</option>
 													<option value="86400">[[search:yesterday]]</option>
@@ -105,12 +101,10 @@
 												</select>
 											</div>
 										</div>
-									</div>
 
-									<div class="form-group post-search-item">
-										<label>[[search:sort-by]]</label>
-										<div class="row">
-											<div class="col-md-6">
+										<div class="post-search-item col-md-6">
+											<label>[[search:sort-by]]</label>
+											<div class="form-group">
 												<select id="post-sort-by" class="form-control">
 													<option value="relevance">[[search:relevance]]</option>
 													<option value="timestamp">[[search:post-time]]</option>
@@ -125,35 +119,33 @@
 													<option value="category.name">[[search:category]]</option>
 												</select>
 											</div>
-											<div class="col-md-6">
+											<div class="form-group">
 												<select id="post-sort-direction" class="form-control">
 													<option value="desc">[[search:descending]]</option>
 													<option value="asc">[[search:ascending]]</option>
 												</select>
 											</div>
 										</div>
-									</div>
 
-									<div class="form-group post-search-item">
-										<label>[[search:show-results-as]]</label>
-										<div class="radio">
-											<label>
-												<input type="radio" name="options" id="show-as-posts" checked>
-												[[global:posts]]
-											</label>
-										</div>
-										<div class="radio">
-											<label>
-												<input type="radio" name="options" id="show-as-topics">
-												[[global:topics]]
-											</label>
+										<div class="form-group post-search-item col-md-6">
+											<label>[[search:show-results-as]]</label>
+											<div class="radio">
+												<label>
+													<input type="radio" name="options" id="show-as-posts" checked>
+													[[global:posts]]
+												</label>
+											</div>
+											<div class="radio">
+												<label>
+													<input type="radio" name="options" id="show-as-topics">
+													[[global:topics]]
+												</label>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-
-
 
 						<div class="btn-group">
 							<button type="submit" class="btn btn-primary">[[global:search]]</button>
