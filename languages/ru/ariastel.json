@@ -4,5 +4,6 @@
   "all-users": "Все",
   "communities": "Сообщества",
   "login-in-with": "Вход через %1",
-  "sign-in": "Авторизация"
+  "sign-in": "Авторизация",
+  "show-deleted-content": "Показать удаленный контент"
 }

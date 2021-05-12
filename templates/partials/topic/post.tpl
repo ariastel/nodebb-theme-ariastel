@@ -32,12 +32,12 @@
 			</span>
 		</span>
 
+		<span class="label label-danger post--deleted-label">[[topic:post_is_deleted]]</span>
 	</small>
 	<small class="pull-right">
 		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
 	</small>
 	<small class="pull-right">
-		<span class="label label-danger post--deleted-label">[[topic:post_is_deleted]]</span>
 		<i component="post/edit-indicator" class="fa fa-pencil-square<!-- IF privileges.posts:history --> pointer<!-- END --> edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
 
 		<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
@@ -51,12 +51,23 @@
 <br />
 
 <div class="content" component="post/content" itemprop="text">
-	{posts.content}
+	{{{ if !posts.deleted }}}
+			{posts.content}
+	{{{ else }}}
+		{{{ if logicalOr(privileges.view_deleted, posts.selfPost) }}}
+			<section class="spoiler-wrapper spoiler-wrapper--deleted">
+				<button class="spoiler-control btn btn-default">[[ariastel:show-deleted-content]]</button>
+				<section style="display: none;" class="spoiler-content">
+					{posts.content}
+				</section>
+			</section>
+		{{{ end }}}
+	{{{ end }}}
 </div>
 
 <div class="post-footer">
 	{{{ if posts.user.signature }}}
-	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
+		<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
 	{{{ end }}}
 
 	<div class="clearfix">
