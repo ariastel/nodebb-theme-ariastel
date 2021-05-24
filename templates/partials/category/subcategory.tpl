@@ -1,5 +1,9 @@
 <div class="subcategory">
-	<!-- IF children.length --><p>[[category:subcategories]]</p><!-- ENDIF children.length -->
+	{{{ if hasMoreSubCategories }}}
+	<div><!-- IMPORT partials/category-selector.tpl --></div>
+	{{{ else }}}
+	<p>[[category:subcategories]]</p>
+	{{{ end }}}
 
 	<ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
 		{{{each children}}}

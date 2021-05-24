@@ -9,28 +9,29 @@
 			<div class="avatar pull-left">
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
-					<!-- IF topics.thumb -->
-					<img src="{topics.thumb}" class="user-img not-responsive" />
-					<!-- ELSE -->
-					{buildAvatar(topics.user, "46", true, "not-responsive")}
-					<!-- ENDIF topics.thumb -->
+					{{{ if ./thumbs.length }}}
+					<img src="{./thumbs.0.url}" class="user-img not-responsive" />
+					{{{ else }}}
+					{buildAvatar(../user, "46", true, "not-responsive")}
+					{{{ end }}}
 					<i class="fa fa-check"></i>
 				</div>
 				<!-- ENDIF showSelect -->
 
 				<!-- IF !showSelect -->
 				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
-					<!-- IF topics.thumb -->
-					<img src="{topics.thumb}" class="user-img not-responsive" />
-					<!-- ELSE -->
-					{buildAvatar(topics.user, "46", true, "not-responsive")}
-					<!-- ENDIF topics.thumb -->
+					{{{ if ./thumbs.length }}}
+					<img src="{./thumbs.0.url}" class="user-img not-responsive" />
+					{{{ else }}}
+					{buildAvatar(../user, "46", true, "not-responsive")}
+					{{{ end }}}
 				</a>
 				<!-- ENDIF !showSelect -->
 			</div>
 
 			<h2 component="topic/header" class="title">
-				<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
+				<i component="topic/scheduled" class="fa fa-clock-o <!-- IF !topics.scheduled -->hide<!-- ENDIF !topics.scheduled -->" title="[[topic:scheduled]]"></i>
+				<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF (topics.scheduled || !topics.pinned) -->hide<!-- ENDIF (topics.scheduled || !topics.pinned) -->" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->" title="[[topic:locked]]"></i>
 				<i component="topic/moved" class="fa fa-arrow-circle-right <!-- IF !topics.oldCid -->hide<!-- ENDIF !topics.oldCid -->" title="[[topic:moved]]"></i>
 				{{{each topics.icons}}}{@value}{{{end}}}
@@ -90,7 +91,8 @@
 		</div>
 
 		<div class="col-md-4 col-sm-3 teaser hidden-xs" component="topic/teaser">
-			<div class="card">
+			<div class="card background-link-container" style="border-color: {topics.category.bgColor}">
+				<a class="background-link" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"></a>
 				<!-- IF topics.unreplied -->
 				<p>
 					[[category:no_replies]]
