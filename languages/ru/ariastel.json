@@ -5,5 +5,6 @@
   "communities": "Сообщества",
   "login-in-with": "Вход через %1",
   "sign-in": "Авторизация",
-  "show-deleted-content": "Показать удаленный контент"
+  "show-deleted-content": "Показать удаленный контент",
+  "open-composer": "Открыть редактор"
 }

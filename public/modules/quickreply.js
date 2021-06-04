@@ -30,6 +30,15 @@ define('ariastel/quickreply', [
 		// data.element.textcomplete(data.strategies, data.options);
 		// $('.textcomplete-wrapper').css('height', '100%').find('textarea').css('height', '100%');
 
+		components.get('topic/quickreply/open-composer').on('click', function(e) {
+			e.preventDefault();
+			$(window).trigger('action:composer.post.new', {
+				tid: ajaxify.data.tid,
+				pid: null,
+				topicName: ajaxify.data.titleRaw,
+				text: $('[component="topic/quickreply/text"]').val() || '',
+			});
+		});
 		components.get('topic/quickreply/button').on('click', function(e) {
 			e.preventDefault();
 			var replyMsg = components.get('topic/quickreply/text').val();

@@ -99,14 +99,18 @@
       @avatar-size-md: 30px;
 
       & [component="user/picture"] {
+        font-size: 1.5rem;
+        
         @media (max-width: @screen-md) {
           width: @avatar-size-xs;
           height: @avatar-size-xs;
+          line-height: @avatar-size-xs;
         }
 
         @media (min-width: @screen-md) {
           width: @avatar-size-md;
           height: @avatar-size-md;
+          line-height: @avatar-size-md;
         }
       }
 
@@ -117,7 +121,7 @@
 
         @media (min-width: @screen-md) {
           margin-top: -4px;
-          margin-left: 6px;
+          margin-left: 9px;
           min-width: @avatar-size-md;
           min-height: @avatar-size-md;
         }

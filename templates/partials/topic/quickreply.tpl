@@ -15,6 +15,7 @@
 			<textarea name="content" component="topic/quickreply/text" class="form-control" rows="5"></textarea>
 		</div>
 		<button type="submit" component="topic/quickreply/button" class="btn btn-primary pull-right">[[ariastel:post-quick-reply]]</button>
+		<button type="button" component="topic/quickreply/open-composer" class="btn btn-default pull-right">[[ariastel:open-composer]]</button>
 	</form>
 </div>
 <!-- ENDIF privileges.topics:reply -->

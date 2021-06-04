@@ -1,4 +1,4 @@
-<li component="categories/category" data-cid="{../cid}" data-numRecentReplies="1" class="aa_cat-item">
+<li component="categories/category" data-cid="{../cid}" data-numRecentReplies="1" class="aa_cat-item category-{../cid}">
 	<meta itemprop="name" content="{../name}">
 
 		{{{ if ../backgroundImage }}}
