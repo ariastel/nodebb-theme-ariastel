@@ -5,7 +5,7 @@
 	{{{end}}}
 </div>
 <div class="row">
-	<div class="<!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
+	<div class="<!-- IF widgets.sidebar.length -->col-lg-8 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
 		{{{ if pagination.pages.length }}}
 		<div><!-- IMPORT partials/category-selector.tpl --></div>
 		{{{ else }}}
