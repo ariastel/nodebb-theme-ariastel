@@ -65,6 +65,21 @@
 					</li>
 					<!-- ENDIF canChat -->
 
+					<!-- IF !disableCustomUserSkins -->
+					<li class="bootswatchSkinSelect">
+						{{{ if logicalOr(isEqual(config.bootswatchSkin, "light"), isEqual(config.bootswatchSkin, "")) }}}
+							<a href="#" title="[[user:skin.light]]" id="skin_select" component="skin/select" data-ajaxify="false" role="button">
+								<i component="skin/icon" class="fa fa-sun-o"></i>
+							</a>
+						{{{ end }}}
+						{{{ if isEqual(config.bootswatchSkin, "dark") }}}
+							<a href="#" title="[[user:skin.dark]]" id="skin_select" component="skin/select" data-ajaxify="false" role="button">
+								<i component="skin/icon" class="fa fa-moon-o"></i>
+							</a>
+						{{{ end }}}
+					</li>
+					<!-- ENDIF !disableCustomUserSkins -->
+
 					<li id="user_label" class="dropdown">
 						<label for="user-control-list-check" class="dropdown-toggle" data-toggle="dropdown" id="user_dropdown" title="[[global:header.profile]]" role="button">
 							{buildAvatar(user, "md", true)}
