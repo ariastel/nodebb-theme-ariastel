@@ -29,6 +29,22 @@
 				<!-- IF config.loggedIn -->
 
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
+
+				<!-- IF !disableCustomUserSkins -->
+					<li class="bootswatchSkinSelect">
+						{{{ if logicalOr(isEqual(config.bootswatchSkin, "light"), isEqual(config.bootswatchSkin, "")) }}}
+							<a href="#" title="[[user:skin.light]]" id="skin_select" component="skin/select" data-ajaxify="false" role="button">
+								<i component="skin/icon" class="fa fa-sun-o"></i>
+							</a>
+						{{{ end }}}
+						{{{ if isEqual(config.bootswatchSkin, "dark") }}}
+							<a href="#" title="[[user:skin.dark]]" id="skin_select" component="skin/select" data-ajaxify="false" role="button">
+								<i component="skin/icon" class="fa fa-moon-o"></i>
+							</a>
+						{{{ end }}}
+					</li>
+				<!-- ENDIF !disableCustomUserSkins -->
+
 					<li class="notifications dropdown text-center hidden-xs" component="notifications">
 						<a href="{relative_path}/notifications" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown" data-ajaxify="false" role="button">
 							<i component="notifications/icon" class="fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></i>
@@ -64,21 +80,6 @@
 						</ul>
 					</li>
 					<!-- ENDIF canChat -->
-
-					<!-- IF !disableCustomUserSkins -->
-					<li class="bootswatchSkinSelect">
-						{{{ if logicalOr(isEqual(config.bootswatchSkin, "light"), isEqual(config.bootswatchSkin, "")) }}}
-							<a href="#" title="[[user:skin.light]]" id="skin_select" component="skin/select" data-ajaxify="false" role="button">
-								<i component="skin/icon" class="fa fa-sun-o"></i>
-							</a>
-						{{{ end }}}
-						{{{ if isEqual(config.bootswatchSkin, "dark") }}}
-							<a href="#" title="[[user:skin.dark]]" id="skin_select" component="skin/select" data-ajaxify="false" role="button">
-								<i component="skin/icon" class="fa fa-moon-o"></i>
-							</a>
-						{{{ end }}}
-					</li>
-					<!-- ENDIF !disableCustomUserSkins -->
 
 					<li id="user_label" class="dropdown">
 						<label for="user-control-list-check" class="dropdown-toggle" data-toggle="dropdown" id="user_dropdown" title="[[global:header.profile]]" role="button">

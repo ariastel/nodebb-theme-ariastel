@@ -57,15 +57,18 @@ $(document).ready(function () {
 			}
 		}
 
+		function setTopCssNull() {
+			fixTopCss('');
+		}
+		function setTopCssZero() {
+			fixTopCss('0px');
+		}
+
 		navbarEl.off('show.autoHidingNavbar')
-			.on('show.autoHidingNavbar', function() {
-				fixTopCss('');
-			});
+			.on('show.autoHidingNavbar', setTopCssNull);
 
 		navbarEl.off('hide.autoHidingNavbar')
-			.on('hide.autoHidingNavbar', function() {
-				fixTopCss('0px');
-			});
+			.on('hide.autoHidingNavbar', setTopCssZero);
 	}
 
 	function setupNProgress() {
